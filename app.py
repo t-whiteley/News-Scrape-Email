@@ -22,7 +22,7 @@ def get_articles():
         try:
             name = article.find_all('span', {'class': html_name_class})[0].text
         except:
-            name = "[Title not found]"
+            name = "[Title not found.]"
         date = article.find('time').text
         link = 'https://www.reuters.com/' + article.find('a')["href"]
         tpl = (name, date, link)
